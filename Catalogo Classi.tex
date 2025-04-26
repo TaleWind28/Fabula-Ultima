@@ -12,30 +12,40 @@
 \usepackage{wrapfig}
 \usepackage{caption}
 
+% Cambiare il colore delle sezioni
+\titleformat{\section}
+  {\color{bluscuro}\Large\bfseries} % Stile: colore + grande + grassetto
+  {\thesection}{1em}{}
+
+\titleformat{\subsection}
+  {\color{bluscuro}\large\bfseries} % Stile: colore + medio + grassetto
+  {\thesubsection}{1em}{}
+
+\renewcommand{\cfttoctitlefont}{\color{bluscuro}\huge\bfseries} % Titolo "Indice" in blu e grande
+
+
 \title{Categorie di Classi}
 \author{TaleWind}
 \begin{document}
 \maketitle
 \tableofcontents
+\newpage
 \section{Introduzione}
 Fabula Ultima offre molte classi al giocatore per poter vivere al meglio la sua esperienza, però spesso sorgono dei dubbi su quali classi siano più adatte per il nostro scopo sia esso il fare Danni, fornire supporto oppure semplicemente diventare un healer a tutti gli effetti.\\
 Questo documento punta ad aiutare i player in difficoltà ad aprocciarsi alla creazione del personaggio di Fabula Ultima, Enjoy!
 
 \section{Categorie di classi}
-Nonostante esistano 27 classi è possibile, fortunatamente, dividerle in 3 categorie principali:
+Nonostante esistano 28 classi è possibile, fortunatamente, dividerle in 3 categorie principali:
 \begin{itemize}
     \item \textbf{Damage} : Classi il cui scopo principale è infliggere danni ingenti.
     \item \textbf{Support}: Classi il cui scopo principale è proteggere il party riducendo le prestazioni di combattimento nemiche.
     \item \textbf{Utility}: Classi il cui scopo principale è il miglioramento delle prestazioni, individuali e/o del party, dentro e fuori dal combattimento, senza agire esplicitamente sul danno.
 \end{itemize}
-Queste categorie sono volutamente generiche e pertanto non incapsulano perfettamente il funzionamento di 
-tutte le classi, però consentono di effettuare una scrematura inziale in base al ruolo che il nostro personaggio 
-avrà all'interno del party.\\
 Per comodità andremo a suddividere, almeno per questo momento, le classi in base al manuale di provenienza:
 \subsection{Manuale Base}
 \begin{itemize}
     \item \textbf{Damage} : Elementalista, Arcanista, Lama Oscura.
-    \item \textbf{Support}: Guardiano, Spiritista, Oratore, Sapiente.
+    \item \textbf{Support}: Guardiano, Spiritista, Oratore.
     \item \textbf{Utility}: Artefice, Canaglia, Chimerista, Entropista, Furia, Maestro D'armi, Sapiente, Tiratore, Viandante
 \end{itemize}
 
@@ -62,11 +72,97 @@ Per comodità andremo a suddividere, almeno per questo momento, le classi in bas
     \item \textbf{Utility}: Floralista, Mercante.
 \end{itemize}
 
-Essendo molto banali come criteri è necessario analizzare il playstile di ogni classe.
 
+\subsection{Contenuto Bonus}
 
-
-
+\begin{itemize}
+    \item \textbf{Utility}: Asso delle Carte, Necromante.
+\end{itemize}
+Queste categorie sono volutamente generiche e pertanto non incapsulano perfettamente il funzionamento di 
+tutte le classi, però consentono di effettuare una scrematura inziale in base al ruolo che il nostro personaggio 
+avrà all'interno del party.
+\section{Playstile}
+La categorizzazione precedente fornisce una prima categorizzazione per le classi che si rivelerà utile per avere
+una prima idea su cosa punta a fare la classe, però molte classi lo fanno in maniera diversa attraverso \textbf{Meccaniche}
+diverse che molto spesso dettano la progressione del personaggio; Un esempio tipico è l'\textbf{Arcanista} che consente 
+di vincolare gli \textbf{Arcana} per usarne i poteri.
+\\
+Pertanto catalogare il \textbf{Playstile} corrisponde ad evidenziare le unicità delle classi insieme alle azioni che utilizzano
+maggiormente, insieme alla statistica principalmente interessata dalle abilità di classe.
+\subsection{Manuale Base}
+\begin{table}[h]
+    \center
+    \begin{tabular}{|c|c|c|c|c|c|c|}
+      \hline
+      \textbf{Classe} & \textbf{Benefici} & \textbf{Mana Usage} & \textbf{PI Usage}  & \textbf{Unicità} & \textbf{Status} & \textbf{Main Stat}\\
+      \hline
+      \centering Arcanista & \textcolor{blue}{PM} & \textcolor{green}{Alto} & \textcolor{red}{NO} & Arcanum & \textcolor{green}{SI} &\textcolor{blue}{VOL} \\
+      \hline
+      \centering Artefice & \textcolor{blue}{PI} & \textcolor{red}{NO} & \textcolor{green}{Alto} & Tecnologie & \textcolor{red}{NO} &\textcolor{blue}{None} \\
+      \hline
+      \centering Canaglia & \textcolor{blue}{PI} & \textcolor{green}{Basso} & \textcolor{red}{NO} & Ci Si Vede! & \textcolor{red}{NO} &\textcolor{blue}{DES, VOL} \\
+      \hline
+      \centering Chimerista & \textcolor{blue}{PM} & \textcolor{green}{Si} & \textcolor{red}{NO} & Magimimesi & \textcolor{green}{Variabile} &\textcolor{blue}{VOL} \\
+      \hline
+      \centering Elementalista & \textcolor{blue}{PM} & \textcolor{green}{Alto} & \textcolor{red}{NO} & None & \textcolor{green}{SI} &\textcolor{blue}{INT, VOL} \\
+      \hline
+      \centering Entropista & \textcolor{blue}{PM} & \textcolor{green}{Alto} & \textcolor{red}{NO} & Settebello & \textcolor{green}{SI} &\textcolor{blue}{INT, VOL} \\
+      \hline
+      \centering Furia & \textcolor{blue}{PV} & \textcolor{red}{NO} & \textcolor{red}{NO} & Provocazione & \textcolor{red}{NO} &\textcolor{blue}{VIG, VOL} \\
+      \hline
+      \centering Guardiano & \textcolor{blue}{PV} & \textcolor{red}{NO} & \textcolor{red}{NO} & Fortezza & \textcolor{red}{NO} &\textcolor{blue}{VIG} \\
+      \hline
+      \centering Lama Oscura & \textcolor{blue}{PV} & \textcolor{red}{NO} & \textcolor{red}{NO} & None & \textcolor{red}{NO} &\textcolor{blue}{VIG} \\
+      \hline
+      \centering Maestro D'armi & \textcolor{blue}{PV} & \textcolor{red}{NO} & \textcolor{red}{NO} & Maestria Armi Da Mischia & \textcolor{green}{SI} &\textcolor{blue}{None} \\
+      \hline
+      \centering Oratore & \textcolor{blue}{PM} & \textcolor{green}{Medio} & \textcolor{red}{NO} & Mi fido di Te & \textcolor{green}{SI} &\textcolor{blue}{INT, VOL} \\
+      \hline
+      \centering Sapiente & \textcolor{blue}{PM} & \textcolor{green}{Medio} & \textcolor{red}{NO} & Concentrazione & \textcolor{red}{NO} &\textcolor{blue}{INT} \\
+      \hline
+      \centering Spiritista & \textcolor{blue}{PM} & \textcolor{green}{Alto} & \textcolor{red}{NO} & Guarigione & \textcolor{green}{SI} &\textcolor{blue}{VOL} \\
+      \hline
+      \centering Tiratore & \textcolor{blue}{PV} & \textcolor{red}{NO} & \textcolor{red}{NO} & Maestria Armi a Distanza & \textcolor{green}{SI} &\textcolor{blue}{None} \\
+      \hline
+      \centering Viandante & \textcolor{blue}{PI} & \textcolor{red}{NO} & \textcolor{red}{NO} & Compagno Fedele & \textcolor{green}{Variabile} &\textcolor{blue}{None} \\
+      \hline
+    \end{tabular}
+  \end{table}
+\subsection{Atlanti Aggiuntivi}
+  \begin{table}[h]
+    \center
+    \begin{tabular}{|c|c|c|c|c|c|c|}
+      \hline
+      \textbf{Classe} & \textbf{Benefici} & \textbf{Mana Usage} & \textbf{PI Usage}  & \textbf{Unicità} & \textbf{Status} & \textbf{Main Stat}\\
+      \hline
+      \centering Cantore  & \textcolor{blue}{PM}   & \textcolor{green}{Alto} & \textcolor{red}{NO} & Magicanto & \textcolor{green}{Si} &\textcolor{blue}{None} \\
+      \hline
+      \centering Comandante  & \textcolor{blue}{PV}   & \textcolor{red}{NO} & \textcolor{red}{NO} & Comandare il Party & \textcolor{red}{NO} &\textcolor{blue}{None} \\
+      \hline
+      \centering Danzatore & \textcolor{blue}{PV/PM}   & \textcolor{green}{SI} & \textcolor{green}{Basso} & Danze & \textcolor{green}{SI} &\textcolor{blue}{None} \\
+      \hline
+      \centering Simbolista& \textcolor{red}{NO}   & \textcolor{red}{NO} & \textcolor{red}{NO} & no & \textcolor{red}{NO} &\textcolor{blue}{VOL} \\
+      \hline
+      \centering Esper  & \textcolor{red}{NO}   & \textcolor{red}{NO} & \textcolor{red}{NO} & no & \textcolor{red}{NO} &\textcolor{blue}{VOL} \\
+      \hline
+      \centering Mutante  & \textcolor{red}{NO}   & \textcolor{red}{NO} & \textcolor{red}{NO} & no & \textcolor{red}{NO} &\textcolor{blue}{VOL} \\
+      \hline
+      \centering Pilota & \textcolor{red}{NO}   & \textcolor{red}{NO} & \textcolor{red}{NO} & no & \textcolor{red}{NO} &\textcolor{blue}{VOL} \\
+      \hline
+      \centering Floralista& \textcolor{red}{NO}   & \textcolor{red}{NO} & \textcolor{red}{NO} & no & \textcolor{red}{NO} &\textcolor{blue}{VOL} \\
+      \hline
+      \centering Gourmet  & \textcolor{red}{NO}   & \textcolor{red}{NO} & \textcolor{red}{NO} & no & \textcolor{red}{NO} &\textcolor{blue}{VOL} \\
+      \hline
+      \centering Invocatore  & \textcolor{red}{NO}   & \textcolor{red}{NO} & \textcolor{red}{NO} & no & \textcolor{red}{NO} &\textcolor{blue}{VOL} \\
+      \hline
+      \centering Mercante& \textcolor{red}{NO}   & \textcolor{red}{NO} & \textcolor{red}{NO} & no & \textcolor{red}{NO} &\textcolor{blue}{VOL} \\
+      \hline
+      \centering Asso Delle Carte& \textcolor{red}{NO}   & \textcolor{red}{NO} & \textcolor{red}{NO} & no & \textcolor{red}{NO} &\textcolor{blue}{VOL} \\
+      \hline
+      \centering Necromante& \textcolor{red}{NO}   & \textcolor{red}{NO} & \textcolor{red}{NO} & no & \textcolor{red}{NO} &\textcolor{blue}{VOL} \\
+      \hline
+    \end{tabular}
+  \end{table}
 
 
 
